@@ -222,8 +222,7 @@ body {
       padding: 15px;
       position: center;
       scroll-behavior: smooth;
-      background-attachment: fixed;
-      background-size: cover;  
+      background-size: fill;  
     }
 
     h1 {
