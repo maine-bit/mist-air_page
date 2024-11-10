@@ -217,7 +217,7 @@ body {
   @media (max-width: 740px) {
 
     .poem {
-      width: 75%;
+      width: 80%;
       height: 500px;
       padding: 15px;
       position: center;
@@ -246,7 +246,7 @@ body {
 
   @media (max-width: 360px) {
     .poem {
-      width: 75%;
+      width: 80%;
       height: 500px;
       padding: 15px;
       position: center;
