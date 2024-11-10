@@ -8,10 +8,11 @@ body {
     align-items: center;
     background-image: url("img/field.jpg");
     background-size: cover; /* Ensures the image covers the entire screen */
-    background-position: center; /* Centers the image */
+    background-position: center; /* Centers the image | center*/
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; 
     min-height: 100vh;
+    min-width: 100vw;
     text-align: center;
     overflow: hidden; /* Hides overflow so falling petals disappear off-screen */
   }
@@ -102,6 +103,7 @@ body {
     width: 80%;
     height: 500px; /* Fixed height for the scrollable area */
     margin: 0 auto;
+    position: fixed;
     overflow-y: auto; /* Enables vertical scrolling */
     scroll-behavior: smooth;
     
@@ -220,7 +222,7 @@ body {
       width: 80%;
       height: 500px;
       padding: 15px;
-      position: center;
+      position: fixed;
       scroll-behavior: smooth;
       background-size: fill;  
     }
