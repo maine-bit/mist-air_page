@@ -15,6 +15,7 @@ body {
     min-width: 100vw;
     text-align: center;
     overflow: hidden; /* Hides overflow so falling petals disappear off-screen */
+    touch-action: none;
   }
 
   #passwordOverlay {
@@ -216,8 +217,13 @@ body {
   }
 
   /* Mobile Responsiveness */
-  @media (max-width: 740px) {
-
+  @media (max-width: 768px) {
+    body{
+        user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        touch-action: none;
+    }
     .poem {
       width: 80%;
       height: 500px;
