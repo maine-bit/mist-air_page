@@ -1,260 +1,90 @@
-body {
-    /* font-family: Playfair; */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("img/field.jpg");
-    background-size: cover; /* Ensures the image covers the entire screen */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed; 
-    min-height: 100vh;
-    text-align: center;
-    overflow: hidden; /* Hides overflow so falling petals disappear off-screen */
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">  <link rel="stylesheet" href="style.css">
+  <script src="pass_code.js"></script>
+  <title>Mist&Air</title>
 
-  #passwordOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(233, 214, 177, 0.8);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
+</head>
+<body>
 
-  #passwordOverlay div {
-    background: rgb(240, 216, 142);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+  <!-- Password Overlay -->
+  <div id="passwordOverlay">
+    <div>
+      <h2>The Key is your Favorite Pet</h2>
+      <input type="password" id="passwordInput" placeholder="Keyword...">
+      <br>
+      <button onclick="checkPassword()">Unlock</button>
+      <p id="errorMessage" style="color:red; display:none;">Oops! Incorrect key. Try again.</p>
+    </div>
+  </div>
 
-  #passwordOverlay h2{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight:500;
-    font-style: normal;
-    color:#6b4701;
-    word-spacing: 0.5px;
+  <!-- The rest of the website content -->
+  <div class="poem" style="display:none;" id="mainContent">
+    <h1>Mist and Air</h1>
+    <p>
+      The mist, a veil that softly clings, <br>
+      Drifts through the morning light like dreams.<br>
+      The air, unseen yet ever near,<br>
+      Whispers through the leaves, a ghostly cheer.<br>
+      Though they wander the same silent paths,<br>
+      They touch but never truly grasp.<br><br>
+
+      The mist, heavy with secrets untold,<br>
+      Hangs over fields, a story cold.<br>
+      The air, forever light and free,<br>
+      Dances around it, wild and unseen.<br>
+      Their fates entwined, yet always apart,<br>
+      One grounded in presence, the other in heart.<br><br>
+
+      The mist, a fleeting, fragile breath,<br>
+      Lingers on the edge of life and death.<br>
+      It craves the air’s elusive form,<br>
+      To hold it close, to feel its warmth.<br>
+      But each attempt, though tender, fails,<br>
+      As love dissolves in vapor trails.<br><br>
+
+      And so they drift, both near and far,<br>
+      Like distant echoes of a star.<br>
+      Bound by fate, yet worlds apart,<br>
+      Two aching halves of the same heart.<br>
+      In their endless dance, we learn anew,<br>
+      Some connections are felt, but never true.<br><br>
+
+      Still, they yearn for what they’ll never know,<br>
+      To merge and feel the other’s glow.<br>
+      But some things in life are destined to be<br>
+      Parallel forces, longing, yet free.<br>
+      In their silent ballet, we see ourselves,<br>
+      Two souls adrift, on different shelves.<br><br>
+
+      In their longing, something stays,<br>
+      A quiet sorrow that never decays.<br>
+      For though they part, they leave behind<br>
+      A trace of love, in heart and mind.<br>
+
+        
+
+    </p>
+    <div class="poem-footer">&copy; 2024 Mist&Air</div>
     
-    
-  }
+  </div>
 
-  #passwordOverlay input {
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px;
-    padding: 10px;
-    font-size: 12px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
+  <!-- Falling Petals -->
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
 
-  #passwordOverlay button {
-    padding: 10px 20px;
-    background-color: #985b10; 
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-
-  #passwordOverlay button:hover {
-    background-color: #555;
-  }
-
-
-  .poem h1 {
-    font-family: 'Lora';
-    font-style: italic;
-    font-size: 3em;
-    margin: 20px 0;
-    /* color: #e3ae00; */
-    /* color: #FFD700; */
-    /* color: #E5C100; */
-    color: #FFCC00;
-    /* color: #DAA520; */
-  }
-
-  p.subtitle {
-    font-family: 'Karla', sans-serif;
-    font-size: 1.5em;
-    color: #555;
-    margin-bottom: 40px;
-  }
-
-  .poem {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 80%;
-    height: 500px; /* Fixed height for the scrollable area */
-    margin: 0 auto;
-    overflow-y: auto; /* Enables vertical scrolling */
-    scroll-behavior: smooth;
-    
-
-    /* Moist/Frosted Glass Effect */
-    backdrop-filter: blur(10px); /* Blurs the background behind the container */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border for contrast */
-    -webkit-backdrop-filter: blur(10px); /* Ensures compatibility with WebKit browsers */
-  }
-
-  
-
-  .poem::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar */
-  
-}
-
-  /* .poem h2 {
-    font-size: 2em;
-    color: #2f4f4f;
-    margin-bottom: 20px;
-  } */
-
-  .poem p {
-    font-family: 'Playfair Display', serif;
-    font-style: normal;
-    font-size: 1.1em;
-    line-height: 1.7;
-    /* color: #151414; */
-    color: #333333;
-  }
-
-  .poem-footer {
-    margin-top: 50px;
-    font-family: 'Playfair Display', bold;
-    font-size: 15px;
-    opacity: 50%;
-    color: #274f4f;
-  }
-
-  /* Falling Petals */
-  .petal {
-    position: absolute;
-    top: -150px;
-    width: 25px;
-    height: 25px;
-    background-image: url('img/dandelion.png'); /* Rose petal icon */
-    background-size: cover;
-    animation: wind-blown 10s linear infinite;
-    /*animation: sway 4s ease-in-out infinite;*/
-    opacity: 0.9;
-  }
-
-  @keyframes wind-blown {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  100% {
-    transform: translate(200px, 100vh) rotate(720deg); /* Petal drifts sideways and falls */
-  }
-}
-
-/* Gentle swaying effect to make the petals move left and right as they fall */
-  @keyframes sway {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-50px); /* Moves the petal to the left */
-  }
-  100% {
-    transform: translateX(50px); /* Moves the petal to the right */
-  }
-}
-
-  .petal:nth-child(2) {
-    left: 10%;
-    animation-duration: 9s, 5s;
-    animation-delay: 1s;
-  }
-
-  .petal:nth-child(3) {
-    left: 30%;
-    animation-duration: 10s, 6s;
-    animation-delay: 2s;
-  }
-
-  .petal:nth-child(4) {
-    left: 50%;
-    animation-duration: 11s, 5s;
-    animation-delay: 3s;
-  }
-
-  .petal:nth-child(5) {
-    left: 70%;
-    animation-duration: 12s, 7s;
-    animation-delay: 4s;
-  }
-
-  .petal:nth-child(6) {
-    left: 90%;
-    animation-duration: 14s, 6s;
-    animation-delay: 4s;
-  }
-
-  .petal:nth-child(7) {
-    left: 100%;
-    animation-duration: 16s, 8s;
-    animation-delay: 4s;
-  }
-
-  /* Mobile Responsiveness */
-  @media (max-width: 740px) {
-
-    .poem {
-      width: 75%;
-      height: 500px;
-      padding: 15px;
-      position: center;
-      scroll-behavior: smooth;
-    }
-
-    h1 {
-      font-size: 2.5em;
-    }
-
-    .poem h2 {
-      font-size: 1.8em;
-    }
-
-    .poem p {
-      font-size: 1.1em;
-    }
-
-    .poem-footer {
-      font-size: 1.3em;
-    }
-  }
-
-  @media (max-width: 360px) {
-    h1 {
-      font-size: 2em;
-    }
-
-    .poem h2 {
-      font-size: 1.5em;
-    }
-
-    .poem p {
-      font-size: 1em;
-    }
-
-    .poem-footer {
-      font-size: 1.2em;
-    }
-  }
+</body>
+</html>
