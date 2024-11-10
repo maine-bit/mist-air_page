@@ -1,4 +1,4 @@
-body {
+html, body {
     /* font-family: Playfair; */
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     background-position: center; /* Centers the image | center*/
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; 
-    min-height: 100vh;
+    height: 100%;
     text-align: center;
     overflow: hidden; /* Hides overflow so falling petals disappear off-screen */
     touch-action: none;
@@ -224,7 +224,7 @@ body {
         touch-action: none;
     }
     .poem {
-      width: 100%;
+      width: 80%;
       height: 500px;
       padding: 15px;
       position: center;
@@ -252,7 +252,7 @@ body {
 
   @media (max-width: 360px) {
     .poem {
-      width: 100%;
+      width: 80%;
       height: 500px;
       padding: 15px;
       position: center;
