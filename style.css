@@ -12,7 +12,6 @@ body {
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; 
     min-height: 100vh;
-    min-width: 100vw;
     text-align: center;
     overflow: hidden; /* Hides overflow so falling petals disappear off-screen */
     touch-action: none;
@@ -217,7 +216,7 @@ body {
   }
 
   /* Mobile Responsiveness */
-  @media (max-width: 768px) {
+  @media (max-width: 740px) {
     body{
         user-select: none;
         -webkit-user-select: none;
