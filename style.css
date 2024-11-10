@@ -222,6 +222,8 @@ body {
       padding: 15px;
       position: center;
       scroll-behavior: smooth;
+      background-attachment: fixed;
+      background-size: cover;  
     }
 
     h1 {
@@ -233,11 +235,11 @@ body {
     }
 
     .poem p {
-      font-size: 1.1em;
+      font-size: 1.0em;
     }
 
     .poem-footer {
-      font-size: 1.3em;
+      font-size: 1.0em;
     }
   }
 
@@ -255,6 +257,6 @@ body {
     }
 
     .poem-footer {
-      font-size: 1.2em;
+      font-size: 1.0em;
     }
   }
