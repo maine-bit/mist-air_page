@@ -240,6 +240,7 @@ body {
 
     .poem-footer {
       font-size: 1.0em;
+      font-family: 'Playfair Display', bold;
     }
   }
 
@@ -258,5 +259,6 @@ body {
 
     .poem-footer {
       font-size: 1.0em;
+      font-family: 'Playfair Display', bold;
     }
   }
