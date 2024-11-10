@@ -64,9 +64,9 @@ body {
   }
 
   .poem p {
-    font-family: 'Karla', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.2em;
-    line-height: 1.8;
+    line-height: 1.7;
     color: #333333;
   }
 
