@@ -17,7 +17,7 @@ body {
   }
 
   .poem h1 {
-    font-family: Lora;
+    font-family: 'Lora';
     font-style: italic;
     font-size: 3em;
     margin: 20px 0;
@@ -64,6 +64,7 @@ body {
   }
 
   .poem p {
+    font-family: 'Karla', sans-serif;
     font-size: 1.2em;
     line-height: 1.8;
     color: #333333;
