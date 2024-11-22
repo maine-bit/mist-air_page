@@ -216,7 +216,7 @@ body {
   /* Mobile Responsiveness */
   @media (max-width: 740px) {
     body, html{
-        background-size: cover;
+        background-size: fill;
         background-position: center;
         align-items: center;
     }
