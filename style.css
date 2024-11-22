@@ -216,8 +216,9 @@ body {
   /* Mobile Responsiveness */
   @media (max-width: 740px) {
     body, html{
-        background-size: fill;
+        background-size: cover;
         background-position: center;
+        align-items: center;
     }
     .poem {
       width: 75%;
@@ -225,7 +226,6 @@ body {
       padding: 15px;
       position: center;
       background-attachment: fixed;
-      background-size: fill;
       scroll-behavior: smooth;
     }
 
