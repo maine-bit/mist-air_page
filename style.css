@@ -1,22 +1,25 @@
-html, body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+html{
     height: 100%;
+    background-image: url("img/field.jpg");
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */ 
+    background-attachment: fixed;
+    position: center;
 }
 
 body {
     /* font-family: Playfair; */
     margin: 0 auto;
     padding: 0;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("img/field.jpg");
-    background-size: cover; /* Ensures the image covers the entire screen */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed; 
+    height: 100vh;
+    text-align: center;
+    overflow: hidden; /* Hides overflow so falling petals disappear off-screen */
+    position: relative;
     height: 100vh;
     width: 100%;
     text-align: center;
@@ -101,6 +104,7 @@ body {
   }
 
   .poem {
+    position: fixed;
     background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
     padding: 20px;
     border-radius: 10px;
