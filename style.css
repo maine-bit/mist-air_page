@@ -154,7 +154,7 @@ body {
   /* Falling Petals */
   .petal {
     position: absolute;
-    top: -150px;
+    top: 15px;
     width: 25px;
     height: 25px;
     background-image: url('img/dandelion.png'); /* Rose petal icon */
