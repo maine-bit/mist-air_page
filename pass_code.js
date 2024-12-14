@@ -1,7 +1,7 @@
 // JavaScript to check the password
 function checkPassword() {
     var password = document.getElementById("passwordInput").value;
-    var correctPassword = "goat"; // Set the correct password here
+    var correctPassword = "urloved8"; // Set the correct password here
     
     if (password === correctPassword) {
       document.getElementById("passwordOverlay").style.display = "none";
